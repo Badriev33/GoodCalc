@@ -1,0 +1,60 @@
+
+.fon {
+    background: gray;
+    height: 500px;
+    width: 350px;
+    margin: 50px auto;
+    border-radius: 3%;
+}
+
+.button {
+    background: #b4b1b1;
+    width: 350px;
+    height: 200px;
+    margin: 50px auto;
+    padding-bottom: 43%;
+    border-radius: 0 0 10px 10px;
+   
+    
+    
+}   
+.btn {
+    border-radius: 10%;
+    background: #3d3636;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+.orange {
+    background: #e18850;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 75px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-left: 5%;
+    padding-top: 5%;
+    border-radius: 3%;
+   
+}
+
+
+.wr {
+    background: gray;
+    color: white;
+    font-size: 25px;
+    width: 342px;
+    height: 115px;
+    border-radius: 13px 13px 0 0;
+    
+   
+}
+.content {
+    background-color: gray;
+    height: 70px;
+    border-radius: 12px 12px 0 0;
+}
