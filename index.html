@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Goodcalc</title>
+    
+</head>
+<body>
+    
+   <div class="fon" id="app">
+
+      <div class="content"> 
+          <form>
+          <input @keyup.enter="calc()" id="name" class="wr" type="text "v-model="result" placeholder="Введите число">
+      </div>
+       
+       <div class="button">
+           <div class="grid">
+               <button @click="input(num)" class="btn" v-for="num in numseven">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numeight">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numnine">{{num}}</button>
+               <button @click="input(num)" class="btn orange" v-for="num in opplus">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numfour">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numfive">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numsiks">{{num}}</button>
+               <button @click="input(num)" class="btn orange" v-for="num in opminus">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numone">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numtwo">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numthree">{{num}}</button>
+               <button @click="input(num)" class="btn orange" v-for="num in opshare">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in numzero">{{num}}</button>
+               <button @click="input(num)" class="btn" v-for="num in dot">.</button>
+               <button class="btn" type="button" id="send" name="button">=</button>
+            </form>
+               <button @click="input(num)" class="btn orange" v-for="num in opmulti">X</button>
+           </div>
+       </div>
+   </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="calc.js"></script>
+</html>
