@@ -13,8 +13,9 @@
    <div class="fon" id="app">
 
       <div class="content"> 
-          <form>
-          <input @keyup.enter="calc()" id="name" class="wr" type="text "v-model="result" placeholder="Введите число">
+          <div class="babytwo"></div> <!--Див для вывода результата-->
+          <form class="form">
+         <input @keyup.enter="calc()" id="name" class="wr" type="text "v-model="result" placeholder="0">
       </div>
        
        <div class="button">
@@ -32,15 +33,17 @@
                <button @click="input(num)" class="btn" v-for="num in numthree">{{num}}</button>
                <button @click="input(num)" class="btn orange" v-for="num in opshare">{{num}}</button>
                <button @click="input(num)" class="btn" v-for="num in numzero">{{num}}</button>
-               <button @click="input(num)" class="btn" v-for="num in dot">.</button>
+               <button @click="input(num)" class="btn" v-for="num in dot">{{num}}</button>
                <button class="btn" type="button" id="send" name="button">=</button>
+             
             </form>
                <button @click="input(num)" class="btn orange" v-for="num in opmulti">X</button>
            </div>
        </div>
    </div>
+   
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 <script src="calc.js"></script>
 </html>

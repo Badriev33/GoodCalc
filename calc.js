@@ -1,6 +1,6 @@
 var vue = new Vue({
     el: '#app',
-    data: {
+    data: { // Массивы для чисел и оппераций
       result: '',
       numseven: [7],
       numeight: [8],
@@ -19,8 +19,8 @@ var vue = new Vue({
 	  opmulti: ['*'],
     },
     methods: {
-      input: function(char) {
-        //this.result = this.result.toString();
+      input: function(char) { //Функция для отображения чисел в Input
+        this.result = this.result.toString();
         this.result+=char;
       },
       
@@ -32,36 +32,34 @@ var vue = new Vue({
 
 
 
-$("#send").on("click", function() {
+$("#send").on("click", function() {  //функция для кнопки "=" - отправить.
 	
-	var name = $("#name").val().trim();
+	var name = $("#name").val(); //trim();
 	
 
-	if(name == "") {
-		$("#errorMess").text("Введите число");
-		return false;
-	
-	}
 
-	$("#errorMess").text("");
-
-	$.ajax({
+	$.ajax({  //AJAX-запрос для отправки данных на бек
 	  url: 'bek.php',
 	  type: 'POST',
 	  cache: false,
 	  data: { 'name': name },
 	  dataType: 'html',
-	 // beforeSend: function() {
-		//$("#sendMail").prop("disabled", true);
-	  //},
-	  success: function(data) {
-      alert(data);
-	  
-	
-	
-		//$("#send").prop("disabled", false);
+	 
+	  success: function(data) {  //Функция, которая возвращает рассчитанное значение с бекенда в html
+      //alert(data);
+		
+	 $('.babytwo').html(data); //возвращает значение с бека и выводит его в определённый див
+		
 	  }
-	});
 
+	});
 	
 });
+
+
+
+
+
+
+	
+  
